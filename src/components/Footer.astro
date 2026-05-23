@@ -41,19 +41,31 @@ const appVersion = packageJson.version;
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-white/20"
+            class="group flex h-12 w-12 items-center justify-center text-white/80 transition duration-300 ease-out hover:-translate-y-1 hover:text-white"
             aria-label="Instagram de Yoga Con Mar"
           >
-            IG
+            <img
+              src="/icons/instagram.svg"
+              alt=""
+              aria-hidden="true"
+              class="h-9 w-9 opacity-80 transition duration-300 ease-out group-hover:scale-110 group-hover:rotate-6 group-hover:opacity-100"
+              loading="lazy"
+            />
           </a>
           <a
             href={contactUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-white/20"
+            class="group flex h-12 w-12 items-center justify-center text-white/80 transition duration-300 ease-out hover:-translate-y-1 hover:text-white"
             aria-label="WhatsApp de Yoga Con Mar"
           >
-            WA
+            <img
+              src="/icons/whatsapp.svg"
+              alt=""
+              aria-hidden="true"
+              class="h-9 w-9 opacity-80 transition duration-300 ease-out group-hover:scale-110 group-hover:-rotate-6 group-hover:opacity-100"
+              loading="lazy"
+            />
           </a>
         </div>
       </div>

@@ -23,12 +23,14 @@ npm run preview
 - `src/components/`: secciones reutilizables del sitio.
 - `src/data/site.ts`: datos compartidos, enlaces de contacto e imagenes.
 - `src/styles/global.css`: estilos globales y tema visual.
+- `public/icons/`: iconos SVG usados por los enlaces sociales.
 
 ## Configuracion del sitio
 
 - WhatsApp e Instagram se configuran en `src/data/site.ts`.
 - Los enlaces de WhatsApp usan `whatsappLink()` para incluir el mensaje inicial de contacto.
 - La version visible en el footer se lee desde `package.json`.
+- Los iconos sociales del footer se referencian desde `public/icons/`.
 
 ## Pendiente antes de publicar
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4
+
+- Se reemplazaron los textos de Instagram y WhatsApp del footer por iconos SVG externos optimizados.
+- Se agregaron animaciones de hover para los botones sociales del footer.
+- Se elimina contenido no necesario.
+
 ## 0.1.3
 
 - Se actualizaron los datos reales de contacto para WhatsApp e Instagram.

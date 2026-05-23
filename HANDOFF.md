@@ -7,10 +7,11 @@
 - Los datos compartidos del sitio viven en `src/data/site.ts`.
 - WhatsApp esta configurado con el numero real `524772593084`.
 - Instagram esta configurado como `https://instagram.com/yogamartz`.
-- `package.json` y `package-lock.json` estan en version `0.1.3`.
-- `CHANGELOG.md` tiene como entrada mas reciente `0.1.3`.
+- `package.json` y `package-lock.json` estan en version `0.1.4`.
+- `CHANGELOG.md` tiene como entrada mas reciente `0.1.4`.
 - `Readme.md` documenta descripcion, stack, comandos, estructura, configuracion y pendientes de publicacion.
 - El footer muestra la version actual leyendo `version` desde `package.json`.
+- El footer usa iconos SVG externos para Instagram y WhatsApp desde `public/icons/`, sin contenedor circular, con tamano aumentado y animacion al pasar el mouse.
 - `npm install` fue ejecutado para sincronizar `package-lock.json`.
 
 ## Pendiente

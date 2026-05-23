@@ -25,9 +25,5 @@ export const images = {
   beginner:
     "https://images.unsplash.com/photo-1602217709696-d2d1da53fb37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
   group:
-    "https://images.unsplash.com/photo-1589734004790-885767bec2ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
-  private:
-    "https://images.unsplash.com/photo-1484618273142-b6e2536a307d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
-  online:
-    "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1589734004790-885767bec2ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
 };
