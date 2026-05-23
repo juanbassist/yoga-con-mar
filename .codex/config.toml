@@ -1,0 +1,5 @@
+[mcp_servers.astro-docs]
+command = "npx"
+args = ["-y", "mcp-remote", "https://mcp.docs.astro.build/mcp"]
+
+# npx skills add delineas/astro-framework-agents --skill astro-framework

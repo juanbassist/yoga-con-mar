@@ -17,6 +17,13 @@ npm run build
 npm run preview
 ```
 
+### Add Skill Astro
+
+[.codex/config.toml](.codex/config.toml)
+
+- Instalar skill de astro: `npx skills add delineas/astro-framework-agents --skill astro-framework`
+
+
 ## Estructura
 
 - `src/pages/index.astro`: ensambla la landing principal.

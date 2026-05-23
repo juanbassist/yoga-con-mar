@@ -26,3 +26,5 @@ Thumbs.db
 # Local tooling cache
 .turbo/
 .cache/
+
+figma-design
