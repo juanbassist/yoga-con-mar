@@ -1,0 +1,46 @@
+---
+const testimonials = [
+  {
+    text: "Llegué con mucho estrés y encontré un espacio de calma increíble.",
+    author: "Mariana",
+    role: "Alumna regular",
+  },
+  {
+    text: "No pensé que podría hacer yoga siendo principiante, pero me sentí acompañada desde el primer día.",
+    author: "Laura",
+    role: "Principiante",
+  },
+  {
+    text: "Las sesiones privadas me ayudaron muchísimo con mi postura y dolor de espalda.",
+    author: "Sofía",
+    role: "Sesiones privadas",
+  },
+];
+---
+
+<section id="testimonios" class="section-pad bg-white">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-16 space-y-4 text-center">
+      <h2 class="text-3xl text-foreground sm:text-4xl lg:text-5xl">
+        Lo que dicen nuestras alumnas
+      </h2>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      {testimonials.map((testimonial) => (
+        <figure class="rounded-2xl border border-line bg-background p-8 transition hover:border-sage hover:shadow-lg">
+          <div class="mb-4 font-serif text-5xl leading-none text-sage/30" aria-hidden="true">
+            “
+          </div>
+          <blockquote class="mb-6 text-lg italic leading-relaxed text-foreground">
+            {testimonial.text}
+          </blockquote>
+          <figcaption>
+            <p class="font-medium text-foreground">{testimonial.author}</p>
+            <p class="text-sm text-muted">{testimonial.role}</p>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

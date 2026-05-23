@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+import { SITE_NAME, SITE_URL, images } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Yoga Con Mar | Clases de yoga para principiantes, online y personalizadas",
+  description = "Clases de yoga para principiantes, yoga online y sesiones personalizadas para reducir estres, mejorar flexibilidad y crear bienestar.",
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, SITE_URL).toString();
+---
+
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="clases de yoga, yoga para principiantes, yoga online, yoga para estres, yoga personalizado, Yoga Con Mar"
+    />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={images.hero} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={images.hero} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,53 @@
+---
+const faqs = [
+  {
+    question: "¿Necesito experiencia previa?",
+    answer:
+      "No. Las clases están pensadas también para principiantes. Te acompaño paso a paso para que te sientas cómoda desde el primer día.",
+  },
+  {
+    question: "¿Necesito ser flexible?",
+    answer:
+      "No. La flexibilidad se desarrolla con la práctica. Empezamos desde donde estés y avanzamos a tu ritmo.",
+  },
+  {
+    question: "¿Qué necesito llevar?",
+    answer:
+      "Ropa cómoda, agua y ganas de conectar contigo. Si tienes tapete de yoga es ideal, pero no es indispensable para empezar.",
+  },
+  {
+    question: "¿Cómo reservo?",
+    answer:
+      "Simplemente escríbenos por WhatsApp. Te responderé personalmente para ayudarte a elegir la mejor opción para ti.",
+  },
+];
+---
+
+<section id="faq" class="section-pad bg-white">
+  <div class="mx-auto max-w-3xl">
+    <div class="mb-16 space-y-4 text-center">
+      <h2 class="text-3xl text-foreground sm:text-4xl lg:text-5xl">
+        Preguntas frecuentes
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <details
+          class="group rounded-2xl border border-line bg-background transition hover:border-sage"
+          open={index === 0}
+        >
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-5 text-left">
+            <span class="text-lg font-medium text-foreground">{faq.question}</span>
+            <span class="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-sage/10 text-sage transition group-open:rotate-180">
+              v
+            </span>
+          </summary>
+          <div class="px-6 pb-5">
+            <p class="leading-relaxed text-muted">{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

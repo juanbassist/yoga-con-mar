@@ -1,0 +1,52 @@
+---
+import { images, whatsappLink } from "../data/site";
+
+const contactUrl = whatsappLink("Hola Mar, me gustaria reservar mi primera clase de yoga");
+---
+
+<section id="inicio" class="relative overflow-hidden px-4 pb-20 pt-52 sm:px-6 md:pt-36 lg:px-8">
+  <div class="mx-auto max-w-7xl">
+    <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <h1 class="max-w-3xl text-4xl leading-tight text-foreground sm:text-5xl lg:text-6xl">
+            Hola, soy Mar. Te acompaño a comenzar tu práctica de yoga desde donde estés.
+          </h1>
+          <p class="max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+            Clases de yoga para principiantes, sesiones privadas y yoga online diseñadas para ayudarte a reducir estrés, mejorar tu energía y sentirte mejor.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 sm:flex-row">
+          <a
+            href={contactUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex justify-center rounded-full bg-sage px-8 py-4 font-medium text-white shadow-lg shadow-sage/20 transition hover:-translate-y-0.5 hover:bg-sage-dark"
+          >
+            Reservar clase por WhatsApp
+          </a>
+        </div>
+
+        <p class="inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-4 py-3 text-sm text-muted backdrop-blur-sm">
+          <span class="h-2 w-2 rounded-full bg-sage"></span>
+          Primera clase disponible para nuevos alumnos
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] shadow-2xl">
+          <img
+            src={images.hero}
+            alt="Mujer practicando yoga en un espacio tranquilo y luminoso"
+            class="h-full w-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <div class="absolute -bottom-6 -right-6 h-32 w-32 rounded-full bg-clay opacity-40 blur-3xl"></div>
+        <div class="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-sage opacity-30 blur-3xl"></div>
+      </div>
+    </div>
+  </div>
+</section>

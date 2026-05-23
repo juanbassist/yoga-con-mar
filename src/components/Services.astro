@@ -1,0 +1,83 @@
+---
+import { images, whatsappLink } from "../data/site";
+
+const services = [
+  {
+    title: "Yoga para principiantes",
+    description: "Empieza desde cero con acompañamiento amable y progresivo.",
+    cta: "Quiero comenzar",
+    link: whatsappLink("Hola Mar, quiero comenzar con yoga para principiantes"),
+    image: images.beginner,
+    alt: "Persona practicando yoga para principiantes en un espacio luminoso",
+  },
+  {
+    title: "Yoga grupal",
+    description: "Clases dinámicas para crear constancia y disfrutar en comunidad.",
+    cta: "Consultar horarios",
+    link: whatsappLink("Hola Mar, quiero conocer los horarios de clases grupales"),
+    image: images.group,
+    alt: "Clase grupal de yoga en ambiente tranquilo",
+  },
+  {
+    title: "Yoga privado 1 a 1",
+    description: "Sesiones personalizadas enfocadas en tus objetivos y necesidades.",
+    cta: "Agendar sesión",
+    link: whatsappLink("Hola Mar, me interesan las sesiones privadas de yoga"),
+    image: images.private,
+    alt: "Sesion privada de yoga con acompañamiento personalizado",
+  },
+  {
+    title: "Yoga online",
+    description: "Practica desde casa con sesiones guiadas en vivo.",
+    cta: "Reservar online",
+    link: whatsappLink("Hola Mar, quiero informacion sobre clases online"),
+    image: images.online,
+    alt: "Practica de yoga online desde casa",
+  },
+];
+---
+
+<section id="clases" class="section-pad bg-gradient-to-b from-background to-white">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-16 space-y-4 text-center">
+      <h2 class="text-3xl text-foreground sm:text-4xl lg:text-5xl">
+        Clases diseñadas para ti
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg text-muted">
+        Encuentra la modalidad perfecta según tu ritmo y necesidades
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2">
+      {services.map((service) => (
+        <article class="group overflow-hidden rounded-[1.5rem] bg-white shadow-lg transition hover:shadow-2xl">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src={service.image}
+              alt={service.alt}
+              class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="space-y-4 p-8">
+            <h3 class="text-2xl text-foreground">
+              {service.title}
+            </h3>
+            <p class="leading-relaxed text-muted">
+              {service.description}
+            </p>
+            <a
+              href={service.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block rounded-full bg-sage px-6 py-3 font-medium text-white transition hover:bg-sage-dark"
+            >
+              {service.cta}
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

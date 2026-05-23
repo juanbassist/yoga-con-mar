@@ -1,0 +1,57 @@
+---
+const benefits = [
+  {
+    title: "Reduce estrés y ansiedad",
+    description: "Encuentra calma y equilibrio emocional a través de la práctica consciente.",
+  },
+  {
+    title: "Mejora flexibilidad",
+    description: "Desarrolla movilidad y libertad de movimiento en tu cuerpo.",
+  },
+  {
+    title: "Fortalece cuerpo y mente",
+    description: "Construye fuerza física mientras cultivas claridad mental.",
+  },
+  {
+    title: "Mejora postura",
+    description: "Corrige desbalances y alivia tensiones acumuladas.",
+  },
+  {
+    title: "Mejor descanso",
+    description: "Favorece un sueño más profundo y reparador.",
+  },
+  {
+    title: "Ideal para principiantes",
+    description: "Diseñado para quienes comienzan su camino en el yoga.",
+  },
+];
+---
+
+<section id="beneficios" class="section-pad bg-white">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-16 space-y-4 text-center">
+      <h2 class="text-3xl text-foreground sm:text-4xl lg:text-5xl">
+        Beneficios del yoga para tu bienestar
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg text-muted">
+        Descubre cómo el yoga transforma tu vida día a día
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {benefits.map((benefit) => (
+        <article class="group rounded-2xl border border-line bg-background p-8 transition hover:border-sage hover:bg-white hover:shadow-lg">
+          <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-sage/10 transition group-hover:bg-sage/20" aria-hidden="true">
+            <span class="block h-5 w-5 rounded-full border-2 border-sage"></span>
+          </div>
+          <h3 class="mb-2 text-xl text-foreground">
+            {benefit.title}
+          </h3>
+          <p class="leading-relaxed text-muted">
+            {benefit.description}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

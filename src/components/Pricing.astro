@@ -1,0 +1,96 @@
+---
+import { whatsappLink } from "../data/site";
+
+const plans = [
+  {
+    name: "Clase individual",
+    price: "$50",
+    description: "Ideal para probar tu primera sesión.",
+    cta: "Reservar por WhatsApp",
+    link: whatsappLink("Hola Mar, quiero reservar una clase individual"),
+    popular: false,
+  },
+  {
+    name: "Paquete 5 clases",
+    price: "$250",
+    description: "Perfecto para crear constancia.",
+    cta: "Comprar paquete",
+    link: whatsappLink("Hola Mar, quiero comprar el paquete de 5 clases"),
+    popular: false,
+  },
+  {
+    name: "Membresía mensual",
+    price: "$500",
+    description: "Acceso continuo a tus clases.",
+    cta: "Quiero unirme",
+    link: whatsappLink("Hola Mar, quiero informacion sobre la membresia mensual"),
+    popular: true,
+  },
+];
+---
+
+<section id="precios" class="section-pad bg-gradient-to-b from-background to-white">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-16 space-y-4 text-center">
+      <h2 class="text-3xl text-foreground sm:text-4xl lg:text-5xl">
+        Planes para empezar
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg text-muted">
+        Elige la opción que mejor se adapte a tu ritmo
+      </p>
+    </div>
+
+    <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
+      {plans.map((plan) => (
+        <article
+          class:list={[
+            "relative rounded-[1.5rem] border-2 p-8 transition hover:shadow-xl",
+            plan.popular
+              ? "border-sage bg-sage shadow-lg md:-translate-y-3"
+              : "border-line bg-white hover:border-sage",
+          ]}
+        >
+          {plan.popular && (
+            <p class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-clay px-4 py-1 text-sm font-medium text-white">
+              MÁS POPULAR
+            </p>
+          )}
+
+          <div class="space-y-6">
+            <div>
+              <h3 class:list={["mb-2 text-2xl", plan.popular ? "text-white" : "text-foreground"]}>
+                {plan.name}
+              </h3>
+              <p class="flex items-baseline">
+                <span class:list={["text-4xl font-medium", plan.popular ? "text-white" : "text-foreground"]}>
+                  {plan.price}
+                </span>
+                <span class:list={["ml-2", plan.popular ? "text-white/80" : "text-muted"]}>
+                  MXN
+                </span>
+              </p>
+            </div>
+
+            <p class:list={["leading-relaxed", plan.popular ? "text-white/90" : "text-muted"]}>
+              {plan.description}
+            </p>
+
+            <a
+              href={plan.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class:list={[
+                "block rounded-full px-6 py-4 text-center font-medium transition",
+                plan.popular
+                  ? "bg-white text-sage hover:bg-background"
+                  : "bg-sage text-white hover:bg-sage-dark",
+              ]}
+            >
+              {plan.cta}
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

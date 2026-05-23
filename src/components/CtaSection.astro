@@ -1,0 +1,29 @@
+---
+import { whatsappLink } from "../data/site";
+
+const contactUrl = whatsappLink("Hola Mar, quiero empezar mi practica de yoga");
+---
+
+<section class="section-pad relative overflow-hidden bg-gradient-to-br from-sage to-sage-dark">
+  <div class="absolute inset-0 opacity-10" aria-hidden="true">
+    <div class="absolute left-0 top-0 h-96 w-96 rounded-full bg-white blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-white blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 mx-auto max-w-4xl space-y-8 text-center">
+    <h2 class="text-3xl text-white sm:text-4xl lg:text-5xl">
+      Tu práctica puede empezar hoy
+    </h2>
+    <p class="mx-auto max-w-2xl text-xl leading-relaxed text-white/90">
+      Escríbeme por WhatsApp y te ayudo a elegir la clase ideal para ti.
+    </p>
+    <a
+      href={contactUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block rounded-full bg-white px-12 py-5 text-lg font-medium text-sage shadow-xl transition hover:-translate-y-0.5 hover:bg-background"
+    >
+      Hablar por WhatsApp
+    </a>
+  </div>
+</section>
