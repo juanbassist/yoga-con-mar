@@ -1,7 +1,7 @@
 export const SITE_NAME = "Yoga Con Mar";
 export const SITE_URL = "https://yogaconmar.com";
-export const WHATSAPP_NUMBER = "521XXXXXXXXXX";
-export const INSTAGRAM_URL = "https://instagram.com/yogaconmar";
+export const WHATSAPP_NUMBER = "524772593084";
+export const INSTAGRAM_URL = "https://instagram.com/yogamartz";
 
 export function whatsappLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

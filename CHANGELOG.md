@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Se actualizaron los datos reales de contacto para WhatsApp e Instagram.
+- Se actualizo la documentacion del proyecto con la configuracion vigente del sitio.
+- Se ajustaron pendientes y siguientes pasos para preparar la publicacion.
+
 ## 0.1.2
 
 - Se muestra la version actual del proyecto en la parte inferior del sitio.

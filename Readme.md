@@ -17,13 +17,6 @@ npm run build
 npm run preview
 ```
 
-### Add Skill Astro
-
-[.codex/config.toml](.codex/config.toml)
-
-- Instalar skill de astro: `npx skills add delineas/astro-framework-agents --skill astro-framework`
-
-
 ## Estructura
 
 - `src/pages/index.astro`: ensambla la landing principal.
@@ -31,7 +24,14 @@ npm run preview
 - `src/data/site.ts`: datos compartidos, enlaces de contacto e imagenes.
 - `src/styles/global.css`: estilos globales y tema visual.
 
+## Configuracion del sitio
+
+- WhatsApp e Instagram se configuran en `src/data/site.ts`.
+- Los enlaces de WhatsApp usan `whatsappLink()` para incluir el mensaje inicial de contacto.
+- La version visible en el footer se lee desde `package.json`.
+
 ## Pendiente antes de publicar
 
-- Reemplazar el numero placeholder de WhatsApp en `src/data/site.ts`.
-- Confirmar `SITE_URL`, `INSTAGRAM_URL`, textos, precios y testimonios finales.
+- Confirmar que `SITE_URL` apunta al dominio final de produccion.
+- Revisar textos, precios, clases y testimonios con contenido final de negocio.
+- Probar los enlaces de WhatsApp e Instagram en el navegador antes de publicar.
