@@ -5,9 +5,10 @@
 - Proyecto Astro `yoga-con-mar` con landing page de una sola pagina para Yoga Con Mar.
 - La pagina principal ensambla componentes en `src/pages/index.astro`.
 - Los datos compartidos del sitio viven en `src/data/site.ts`.
-- `package.json` y `package-lock.json` estan en version `0.1.1`.
-- `CHANGELOG.md` tiene como entrada mas reciente `0.1.1`.
+- `package.json` y `package-lock.json` estan en version `0.1.2`.
+- `CHANGELOG.md` tiene como entrada mas reciente `0.1.2`.
 - `Readme.md` documenta brevemente descripcion, stack, comandos, estructura y pendientes de publicacion.
+- El footer muestra la version actual leyendo `version` desde `package.json`.
 - `npm install` fue ejecutado para sincronizar `package-lock.json`.
 
 ## Pendiente

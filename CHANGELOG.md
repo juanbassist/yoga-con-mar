@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Se muestra la version actual del proyecto en la parte inferior del sitio.
+- Se toma la version directamente desde `package.json` para mantenerla sincronizada con el release.
+
 ## 0.1.1
 
 - Se agrego un README breve con descripcion del proyecto, stack, comandos y estructura principal.

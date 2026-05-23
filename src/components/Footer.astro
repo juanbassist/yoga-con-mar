@@ -6,9 +6,11 @@ import {
   SITE_NAME,
   whatsappLink,
 } from "../data/site";
+import packageJson from "../../package.json";
 
 const year = new Date().getFullYear();
 const contactUrl = whatsappLink(defaultWhatsappMessage);
+const appVersion = packageJson.version;
 ---
 
 <footer class="bg-foreground px-4 py-16 text-white sm:px-6 lg:px-8">
@@ -17,7 +19,7 @@ const contactUrl = whatsappLink(defaultWhatsappMessage);
       <div class="space-y-4">
         <h2 class="text-2xl text-white">{SITE_NAME}</h2>
         <p class="leading-relaxed text-white/70">
-          Clases de yoga para bienestar, flexibilidad y equilibrio.
+          Clases de yoga para bienestar, flexibilidad y equilibrio
         </p>
       </div>
 
@@ -57,8 +59,9 @@ const contactUrl = whatsappLink(defaultWhatsappMessage);
       </div>
     </div>
 
-    <div class="border-t border-white/10 pt-8 text-center text-white/60">
+    <div class="space-y-2 border-t border-white/10 pt-8 text-center text-white/60">
       <p>&copy; {year} {SITE_NAME}.</p>
+      <p class="text-xs text-white/40">v{appVersion}</p>
     </div>
   </div>
 </footer>
